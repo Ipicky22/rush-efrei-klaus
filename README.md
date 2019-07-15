@@ -31,17 +31,17 @@ il n'y a pas de question inutile.
 ## <a name='overview'>🎅🏼 Overview</a>
 =================
 
-Le père Noël a fait une demande officielle à l'Efrei pour informatiser sa chaine d'emballage de cadeaux;
+Le père Noël a fait une demande officielle à l'Efrei pour informatiser sa chaine d'emballage de cadeaux;
 La monde tend vers une robotisation et le père Noël dit SK vous demande de concevoir un simulateur de chaine d'emballage.
 
-SK vous fournit une liste décrivant le métier de l'elfe sur la chaine d'emballage de cadeaux.
-Votre chef de projet a préféré prendre les choses en main et a traité pour vous l'analyse fonctionnelle et certains aspects de conception.
+SK vous fournit une liste décrivant le métier de l'elfe sur la chaine d'emballage de cadeaux.
+Votre chef de projet a préféré prendre les choses en main et a traité pour vous l'analyse fonctionnelle et certains aspects de conception.
 
-Il vous fournit une liste d'indications et de contraintes pour l'implémentation des différentes parties du simulateur.
+Il vous fournit une liste d'indications et de contraintes pour l'implémentation des différentes parties du simulateur.
 
 ## Etape \#1. Poney et figurines Dragon Ball
 
-Le chef de projet vous demande d'écrire les classes Toy, Pony, Figurine et DragonBall.
+Le chef de projet vous demande d'écrire les classes Toy, Pony, Figurine et DragonBall.
 
 Il vous indique:
 - Un `Pony` est un `Toy`
@@ -159,7 +159,7 @@ Kamé Hamé Ha!
 
 ## Etape \#2. Une histoire d'emballage
 
-Il faut maintenant être capable de gérer l'emballage des cadeaux:
+Il faut maintenant être capable de gérer l'emballage des cadeaux:
 
 #### Préparation
 
@@ -215,7 +215,7 @@ Sinon, le cadeau est ajouté à l'emballage et l'elf dit:
 
 > Remplacé X par le type du jouet
 
-Attention, un papier cadeau n'a pas besoin d'être ouvert pour emballer.
+Attention, un papier cadeau n'a pas besoin d'être ouvert pour emballer.
 
 > 💡 Tips: Cette méthode modifie le comportement d'un objet passé en paramêtre (packaging).
 Comment faire pour que le changement effectué au sein de la méthode soit "réellement" effectif ?
@@ -310,16 +310,16 @@ true
 
 ### Mise en place
 
-Il faut maintenant être capable de gérer le poste de travail :
+Il faut maintenant être capable de gérer le poste de travail :
 
 Avant toute chose, il faut savoir que tout est `Object`, ie les jouets et les emballages.
 
-L'elfe a une `Table` devant lui et un `ConveyorBelt` (tapis roulant) à côté de lui.
+L'elfe a une `Table` devant lui et un `ConveyorBelt` (tapis roulant) à côté de lui.
 C'est deux entités sont des meubles aka `Furniture`.
 
 L'elfe peut poser et prendre sur un meuble des objets via les méthodes `put` et `take`.
 
-On ne peut rien poser sur le tapis roulant s'il y a déjà quelque chose, un attribut `isBusy`
+On ne peut rien poser sur le tapis roulant s'il y a déjà quelque chose, un attribut `isBusy`
 nous permet de le connaître l'état de ce tapis. Par défaut, un tapis est disponible.
 
 Quand il n'y a plus de place sur la table, elle craque et dit car elle ne peut contenir
@@ -329,13 +329,13 @@ Pour cela créer un attribut `content` qui est un tableau d'`Object`.
 Spécificité de la `Table`, la méthode `take` prend un objet à la fin du tableau et
 il y a une méthode `take` supplémentaire qui prend en paramêtre la position de l'objet.
 
-L'elfe reçoit des Emballages en appuyant sur le bouton `in` du
-tapis roulant ou envoie ce qu'il y a actuellement sur le tapis au père Noël en appuyant sur le bouton `out`
+L'elfe reçoit des Emballages en appuyant sur le bouton `in` du
+tapis roulant ou envoie ce qu'il y a actuellement sur le tapis au père Noël en appuyant sur le bouton `out`
 
-Un emballage envoyé au père Noël est considéré comme perdu, le tapis roulant est de nouveau libre.
+Un emballage envoyé au père Noël est considéré comme perdu, le tapis roulant est de nouveau libre.
 
 L'elfe peut regarder via la méthode `look` sur la table pour savoir ce qu'il s'y trouve;
-Il obtient un tableau avec les intitulés des différents Objets.
+Il obtient un tableau avec les intitulés des différents Objets.
 
 ```sh
 [ "Toy", "Toy", "Packaging", "Toy" ]
@@ -385,12 +385,12 @@ majdi.put(furniture: table, obj: box)
 
 ### Patterns
 
-SK vous demande d'écrire les protocoles `PTable` et `PTapisRoulant` ainsi que les classes
-`TableFactory` et `ConveyorBeltFactory` implémentant ces protocoles.
+SK vous demande d'écrire les protocoles `PTable` et `PTapisRoulant` ainsi que les classes
+`TableFactory` et `ConveyorBeltFactory` implémentant ces protocoles.
 
-La table et le tapis roulant du père Noël contiennent ce qu'il faut pour faire 2 cadeaux.
+La table et le tapis roulant du père Noël contiennent ce qu'il faut pour faire 2 cadeaux.
 
-La disposition/répartition des emballages/jouets entre le tapis et la table est à votre convenance.
+La disposition/répartition des emballages/jouets entre le tapis et la table est à votre convenance.
 SK veut que vous lui fournissiez deux méthodes:
 
 ```swift
@@ -398,7 +398,7 @@ makeTable() -> PTable
 makeConveyorBelt() -> PConveyorBelt
 ```
 
-Ces 2 méthodes permettent de réifier (instancier) ces 2 objets.
+Ces 2 méthodes permettent de réifier (instancier) ces 2 objets.
 
 ### TEST
 
@@ -442,6 +442,3 @@ Pour cela vous devez utiliser des chaussettes magiques.
 
 Tout simplement refaire le projet en TypeScript ou un autre si déjaà fait ;p
 
-## <a name='credits'>Credits</a>
-
-Craft with :heart: by [**Majdi Toumi**](http://majdi.im) in **Paris**.
