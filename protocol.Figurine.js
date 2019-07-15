@@ -1,3 +1,3 @@
-class Figurine {
+export default class Figurine {
 
 }

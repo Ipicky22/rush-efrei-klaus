@@ -1,3 +1,0 @@
-class Dragonball extends Figurine {
-
-}
