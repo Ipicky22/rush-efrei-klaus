@@ -1,0 +1,3 @@
+class Pony extends Toy {
+
+}
