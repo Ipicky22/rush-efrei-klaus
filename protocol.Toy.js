@@ -1,11 +1,13 @@
 export default class Toy {
 
     constructor(type) {
-        this.type = ""
+        this.type = type
     }
 
     isMoved () {}
 
-    getter () {}
+    getter () {
+        return this.type
+    }
 
 }

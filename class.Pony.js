@@ -3,10 +3,12 @@ export default class Pony extends Toy {
 
     #_nb = 1;
 
-    constructor(id, type){
-        super(type)
-        this.id = this.#_nb
+    constructor(){
+        super()
+        Pony.id = this.#_nb
+        this.type = `Pony #${Pony.id}`
         this.init()
+
     }
 
     init(){
@@ -20,11 +22,6 @@ Dou-double poney, j’fais izi money
 
     isMoved(){
         console.log("Huuuuuuhu !")
-    }
-
-    getter(){
-        type = `Pony #${this.id}`
-        console.log(type)
     }
 
 
